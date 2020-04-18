@@ -1,0 +1,155 @@
+<div class="container" style="padding-top: 3%;">
+    <div class="row">
+        <div class="col-sm-4" style=" padding-top: 2%;">
+            <mat-card class="mat-elevation-z8" style="width:100%; z-index:1;">
+                <mat-card-header>
+                    <mat-card-title>
+                        <mat-icon style="color:linear-gradient(black,white); font-size:20px; vertical-align: bottom;">
+                            perm_identity</mat-icon>
+                        Profile
+                    </mat-card-title>
+                    <mat-card-subtitle>
+                        Id: {{id}}
+                    </mat-card-subtitle>
+                </mat-card-header>
+                <mat-divider></mat-divider>
+                <mat-card-content>
+                    <br>
+                    <h5>Student Information: <button mat-button style="margin-left:20%;" (click)="EditInfo()">
+                            <mat-icon style="color:indigo;">edit</mat-icon>
+                        </button></h5>
+                    <table class="table table-striped table-hover table-condensed">
+                        <tbody>
+                            <tr>
+                                <td>Name:</td>
+                                <td>{{StudentName}}</td>
+                            </tr>
+                            <tr>
+                                <td>Roll No:</td>
+                                <td>{{StudentRollNo}}</td>
+                            </tr>
+                            <tr>
+                                <td>Attendance:</td>
+                                <td>{{StudentAttendance}}%</td>
+                            </tr>
+                            <tr>
+                                <td>CGPA:</td>
+                                <td>{{StudentCGPA}}</td>
+                            </tr>
+                            <tr>
+                                <td>Department:</td>
+                                <td>{{StudentDepartment}}</td>
+                            </tr>
+                            <tr>
+                                <td>Class:</td>
+                                <td>{{StudentClass}}</td>
+                            </tr>
+                            <tr>
+                                <td>Contact:</td>
+                                <td>{{PhoneNo}}</td>
+                            </tr>
+                            <tr>
+                                <td>Email:</td>
+                                <td>{{EmailId}}</td>
+                            </tr>
+                        </tbody>
+                    </table>
+                </mat-card-content>
+            </mat-card>
+        </div>
+        <div class="col-sm-8" style="z-index:0">
+            <mat-card style="margin-left: -7%;">
+                <mat-card-header></mat-card-header>
+                <mat-card-content>
+                    <mat-tab-group mat-align-tabs="center">
+                        <mat-tab label="Documents">
+                            <br>
+                            <div class="container">
+                                <h5>Internship Details:</h5>
+                                <div class="container">
+                                    <mat-form-field>
+                                        <mat-label>Scope</mat-label>
+                                        <input matInput type="text">
+                                    </mat-form-field> &nbsp; &nbsp; &nbsp;
+
+                                    <mat-form-field>
+                                        <mat-label>Type</mat-label>
+                                        <input matInput type="text">
+                                    </mat-form-field> <br>
+
+                                    <mat-form-field>
+                                        <mat-label>Domain</mat-label>
+                                        <input matInput type="text">
+                                    </mat-form-field> &nbsp; &nbsp; &nbsp;
+
+                                    <mat-form-field>
+                                        <mat-label>Stipend</mat-label>
+                                        <input matInput type="text">
+                                    </mat-form-field> <br>
+
+                                </div>
+                                <mat-divider></mat-divider> <br>
+                                <h5>Duration:</h5>
+                                <div class="container">
+                                    <mat-form-field>
+                                        <mat-label>Start Date</mat-label>
+                                        <input matInput type="date">
+                                    </mat-form-field> &nbsp; &nbsp; &nbsp;
+
+                                    <mat-form-field>
+                                        <mat-label>End Date</mat-label>
+                                        <input matInput type="date">
+                                    </mat-form-field>
+                                </div>
+                                <mat-divider></mat-divider> <br>
+                                <h5>Company Details:</h5>
+                                <div class="container">
+                                    <mat-form-field>
+                                        <mat-label>Name</mat-label>
+                                        <input matInput type="text">
+                                    </mat-form-field> &nbsp; &nbsp; &nbsp;
+
+                                    <mat-form-field>
+                                        <mat-label>Phone</mat-label>
+                                        <input matInput type="text">
+                                    </mat-form-field> <br>
+
+                                    <mat-form-field>
+                                        <mat-label>Email</mat-label>
+                                        <input matInput type="text">
+                                    </mat-form-field> &nbsp; &nbsp; &nbsp;
+
+                                    <mat-form-field>
+                                        <mat-label>Location</mat-label>
+                                        <input matInput type="text">
+                                    </mat-form-field>
+                                </div>
+                                <mat-divider></mat-divider> <br>
+                                <div align="center">
+                                    <button type="Submit" mat-raised-button color="primary">Submit</button>
+                                </div>
+                            </div>
+                        </mat-tab>
+                        <mat-tab label="Submissions" style="height: 400px;">
+                            <br><br>
+                            <div class="container" style="height:459px;">
+                                <app-table-example>
+                                </app-table-example>
+                            </div>
+                        </mat-tab>
+                        <mat-tab disabled></mat-tab>
+                        <mat-tab disabled>
+                            <ng-template mat-tab-label>
+                                <button mat-icon-button (click)="logOut()">
+                                    Log Out
+                                    <mat-icon style="font-size: 20px;">close</mat-icon>
+                                </button>
+                            </ng-template>
+                        </mat-tab>
+                    </mat-tab-group>
+                </mat-card-content>
+            </mat-card>
+        </div>
+    </div>
+</div>
+

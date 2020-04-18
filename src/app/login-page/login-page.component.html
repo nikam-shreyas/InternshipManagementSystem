@@ -1,0 +1,70 @@
+<br><br><br><br><br>
+<div class="container" style="width:400px;">
+    <mat-card class="mat-elevation-z8">
+        <mat-card-header>
+            <mat-card-title>
+                Internship Management System
+            </mat-card-title>
+        </mat-card-header>
+        <mat-divider></mat-divider>
+        <mat-card-content>
+            <mat-tab-group mat-align-tabs="center">
+                <mat-tab label="Sign In!">
+                    <br><br>
+                    <div class="container" align="center">
+                        <mat-form-field appearance="outline" style="width:250px;">
+                            <mat-label>User Name</mat-label>
+                            <input matInput value="{{UserNameField}}" (input)="UserNameField=$event.target.value">
+                        </mat-form-field>
+                        <br>
+                        <mat-form-field appearance="outline" style="width:250px;">
+                            <mat-label>Password</mat-label>
+                            <input matInput [type]="hide ? 'text' : 'password'" value="{{PasswordField}}"
+                                (input)="PasswordField=$event.target.value">
+                            <button mat-icon-button matSuffix (click)="hide = !hide" [attr.aria-label]="'Hide password'"
+                                [attr.aria-pressed]="!hide">
+                                <mat-icon>{{hide ? 'visibility' : 'visibility_off'}}</mat-icon>
+                            </button>
+                        </mat-form-field>
+                        <button mat-raised-button color="primary" (click)="SignIn()">Sign In</button> &nbsp;&nbsp;
+                        <button mat-flat-button (click)="ClearFields()">Cancel</button> <br> <br>
+                        <div id="invalid"></div>
+                        <br>
+                    </div>
+                    <div align="right">
+                        <a href="">Forgot Password?</a>
+                    </div>
+                </mat-tab>
+                <mat-tab label="Sign Up!">
+                    <br> <br>
+                    <div class="container" align="center">
+                        <mat-form-field appearance="outline" style="width:250px;">
+                            <mat-label>User Name</mat-label>
+                            <input matInput value="{{UsernameSignUp}}" (input)="UsernameSignUp=$event.target.value">
+                        </mat-form-field>
+                        <br>
+                        <mat-form-field appearance="outline" style="width:250px;">
+                            <mat-label>Password</mat-label>
+                            <input matInput [type]="hide ? 'text' : 'password'" [value]="SignUpPassword">
+                            <button mat-icon-button matSuffix (click)="hide = !hide" [attr.aria-label]="'Hide password'"
+                                [attr.aria-pressed]="!hide">
+                                <mat-icon>{{hide ? 'visibility' : 'visibility_off'}}</mat-icon>
+                            </button>
+                        </mat-form-field>
+                        <mat-form-field appearance="outline" style="width:250px;">
+                            <mat-label>Confirm Password</mat-label>
+                            <input matInput [type]="chide ? 'text' : 'password'" [value]="ConfirmSignUpPassword">
+                            <button mat-icon-button matSuffix (click)="chide = !chide"
+                                [attr.aria-label]="'Hide password'" [attr.aria-pressed]="!chide">
+                                <mat-icon>{{chide ? 'visibility' : 'visibility_off'}}</mat-icon>
+                            </button>
+                        </mat-form-field>
+                        <br>
+                        <button mat-raised-button color="primary" (click)="CreateProfile()">Create Account</button> <br> <br>
+                        &nbsp;&nbsp;<div id="invalid1"></div>
+                    </div>
+                </mat-tab>
+            </mat-tab-group>
+        </mat-card-content>
+    </mat-card>
+</div>

@@ -1,0 +1,47 @@
+<h5>Update Details:</h5>
+<mat-divider></mat-divider>
+<div class="container">
+    <br>
+    <mat-form-field>
+        <mat-label>Name</mat-label>
+        <input matInput type="text" disabled [(ngModel)]="StudentName">
+    </mat-form-field> &nbsp;&nbsp;&nbsp;
+    <mat-form-field>
+        <mat-label>Roll No.</mat-label>
+        <input matInput type="text" [(ngModel)]="StudentRollNo">
+    </mat-form-field> <br>
+
+    <mat-form-field>
+        <mat-label>Attendance</mat-label>
+        <input matInput type="text" [(ngModel)]="StudentAttendance">
+    </mat-form-field> &nbsp;&nbsp;&nbsp;
+
+    <mat-form-field>
+        <mat-label>CGPA</mat-label>
+        <input matInput type="text" [(ngModel)]="StudentCGPA">
+    </mat-form-field> <br>
+
+    <mat-form-field>
+        <mat-label>Phone</mat-label>
+        <input matInput type="text" [(ngModel)]="PhoneNo">
+    </mat-form-field> &nbsp;&nbsp;&nbsp;
+
+    <mat-form-field>
+        <mat-label>Email</mat-label>
+        <input matInput type="email" [(ngModel)]="EmailId">
+    </mat-form-field> <br>
+
+    <mat-form-field>
+        <mat-label>Department</mat-label>
+        <input matInput type="text" disabled [(ngModel)]="StudentDepartment">
+    </mat-form-field> &nbsp;&nbsp;&nbsp;
+
+    <mat-form-field>
+        <mat-label>Class</mat-label>
+        <input matInput type="text" [(ngModel)]="StudentClass">
+    </mat-form-field> <br>
+
+    <div align="center">
+        <button mat-raised-button color="primary" (click)="close()">Update</button>
+    </div>
+</div>
